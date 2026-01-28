@@ -49,6 +49,15 @@
       border-radius: 50%;
       border: 3px solid #dee2e6;
     }
+
+    /* Tambahkan di dalam tag <style> kamu */
+    .sidebar ul li {
+      margin-bottom: 8px;
+    }
+
+    .cursor-pointer {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -64,8 +73,9 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item d-md-none"><a class="nav-link" href="aboutme.html">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="aboutme.html">About Me</a></li>
         </ul>
       </div>
     </div>
@@ -75,24 +85,66 @@
     <div class="row">
       <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar p-3 pt-4">
         <div class="position-sticky text-center">
-          <h5 class="fw-bold mb-3">About Me</h5>
+          <!-- <h5 class="fw-bold mb-3">About Me</h5> -->
           <img src="img/profile.jpg" alt="Alydap" class="profile-img mb-3">
 
-          <p class="small text-muted text-start">Assalamu'alaikum wr.wb! Saya Muhammad Ferdynan Ali Syahbana. Saya
-            seorang Fullstack Web developer Laravel & Ci4 yang telah berpengalaman lebih dari 3 tahun</p>
+          <p class="small text-muted text-center">Muhammad Ferdynan Ali Syahbana, S. Kom </p>
           <hr>
           <h5 class="fw-bold mb-3">Skills</h5>
           <div class="d-flex flex-wrap gap-2 justify-content-center">
-            <span class="badge bg-secondary">HTML</span>
-            <span class="badge bg-secondary">CSS</span>
-            <span class="badge bg-secondary">JS</span>
-            <span class="badge bg-secondary">Bootstrap</span>
+            <span class="badge bg-secondary">PHP</span>
+            <span class="badge bg-secondary">Javascript</span>
+            <span class="badge bg-secondary">Laravel</span>
+            <span class="badge bg-secondary">CodeIgniter</span>
+            <span class="badge bg-secondary">MySQL</span>
+            ....
           </div>
           <hr>
           <h5 class="fw-bold mb-3">Links</h5>
           <ul class="list-unstyled text-start ps-2">
-            <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-github"></i> GitHub</a></li>
-            <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
+            <li>
+              <a href="https://github.com/AlyDap" target="_blank" class="text-decoration-none text-dark">
+                <i class="bi bi-github"></i> GitHub
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/muhammad-ferdynan-ali-syahbana-5a7937295/" target="_blank"
+                class="text-decoration-none text-dark">
+                <i class="bi bi-linkedin"></i> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/aly_dap/" target="_blank" class="text-decoration-none text-dark">
+                <i class="bi bi-instagram"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100010240543702&mibextid=ZbWKwL" target="_blank"
+                class="text-decoration-none text-dark">
+                <i class="bi bi-facebook"></i> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/aly_dap" target="_blank" class="text-decoration-none text-dark">
+                <i class="bi bi-twitter-x"></i> Twitter / X
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@ALYDAP" target="_blank" class="text-decoration-none text-dark">
+                <i class="bi bi-youtube"></i> YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://www.upwork.com/freelancers/~0107af81156245d06a" target="_blank"
+                class="text-decoration-none text-dark">
+                <i class="bi bi-briefcase"></i> Upwork
+              </a>
+            </li>
+            <li>
+              <a href="https://10fastfingers.com/user/3292841/" target="_blank" class="text-decoration-none text-dark">
+                <i class="bi bi-keyboard"></i> 10FastFingers
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -106,11 +158,24 @@
 
           <div class="col">
             <div class="card h-100 project-card shadow-sm p-3">
-              <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
+              <img src="img/website-antrian.png" class="card-img-top" alt="Prebusa Project">
               <div class="card-body p-0 pt-3">
-                <h5 class="card-title fw-bold">Prebusa</h5>
-                <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
-                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
+                <h5 class="card-title fw-bold">Web Antrian Dindagkop</h5>
+                <p class="card-text text-muted small mb-2">Landing Page Antrian</p>
+                <a href="https://alydap-antrian-dindagkop.vercel.app/" target="_blank" class="stretched-link small">
+                  Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 project-card shadow-sm p-3">
+              <img src="img/website-sekolah.png" class="card-img-top" alt="Prebusa Project">
+              <div class="card-body p-0 pt-3">
+                <h5 class="card-title fw-bold">Web Sekolah Custom</h5>
+                <p class="card-text text-muted small mb-2">Landing Page Utama</p>
+                <a href="https://alydap-sekolah-kustom.vercel.app/" target="_blank" class="stretched-link small">
                   Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
                 </a>
               </div>
@@ -121,22 +186,9 @@
             <div class="card h-100 project-card shadow-sm p-3">
               <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
               <div class="card-body p-0 pt-3">
-                <h5 class="card-title fw-bold">Prebusa</h5>
+                <h5 class="card-title fw-bold">Web Prebusa</h5>
                 <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
-                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
-                  Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card h-100 project-card shadow-sm p-3">
-              <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
-              <div class="card-body p-0 pt-3">
-                <h5 class="card-title fw-bold">Prebusa</h5>
-                <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
-                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
+                <a href="https://alydap-prebusa.vercel.app/" target="_blank" class="stretched-link small">
                   Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
                 </a>
               </div>
@@ -150,11 +202,56 @@
 
   <footer class="footer">
     <div class="container text-center">
-      <p class="mb-0">&copy; 2026 Alydap. Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> dan Bootstrap.</p>
+      <div class="mb-3">
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
+          <p class="small mb-0 text-light-50">Support and reward me by using:</p>
+
+          <div class="d-inline-flex align-items-center bg-dark border border-secondary rounded-pill px-3 py-1"
+            onclick="copyToClipboard('006801091091507')" style="cursor: pointer;"
+            title="Klik untuk salin nomor rekening">
+            <i class="bi bi-bank2 me-2 text-primary"></i>
+            <span class="fw-bold me-2" style="letter-spacing: 1px; font-size: 0.9rem;">BRI</span>
+            <span class="text-info" style="font-size: 0.9rem;">0068 0109 1091 507</span>
+          </div>
+        </div>
+        <div id="copy-notification" class="small text-success" style="display: none;">
+          <i class="bi bi-check2-circle"></i> BRI number successfully copied!
+        </div>
+
+        <div class="small">
+          Email me:<a href="mailto:ferdynan.jr@gmail.com" class="text-light-50 text-decoration-none hover-email">
+            <i class="bi bi-envelope-at me-1"></i> ferdynan.jr@gmail.com
+          </a>
+        </div>
+
+      </div>
+
+      <hr class="w-25 mx-auto border-secondary">
+
+      <p class="mb-0 small text-light-50">
+        &copy; 2026 Alydap. Dibuat dengan <i class="bi bi-heart-fill text-danger"></i> dan Bootstrap.
+      </p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function copyToClipboard(text) {
+      // Salin ke clipboard
+      navigator.clipboard.writeText(text).then(() => {
+        // Tampilkan notifikasi
+        const notification = document.getElementById('copy-notification');
+        notification.style.display = 'block';
+
+        // Hilangkan notifikasi otomatis setelah 2 detik
+        setTimeout(() => {
+          notification.style.display = 'none';
+        }, 2000);
+      }).catch(err => {
+        console.error('Gagal menyalin: ', err);
+      });
+    }
+  </script>
 </body>
 
 </html>
