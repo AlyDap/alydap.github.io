@@ -14,21 +14,25 @@
     }
 
     .sidebar {
-      min-height: calc(100vh);
+      min-height: calc(100vh - 144px);
       background: white;
       border-right: 1px solid #dee2e6;
     }
 
     .project-card {
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
       border: none;
       border-radius: 12px;
       overflow: hidden;
+      position: relative;
+      /* Wajib ada agar stretched-link tidak lari keluar kartu */
     }
 
     .project-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      background-color: #fcfcfc;
+      /* Sedikit perubahan warna saat di-hover */
     }
 
     .footer {
@@ -36,20 +40,30 @@
       color: white;
       padding: 2rem 0;
     }
+
+    /* Style untuk foto profil bulat */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #dee2e6;
+    }
   </style>
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">ALYDAP</a>
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="index.html">ALYDAP</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item d-md-none"><a class="nav-link" href="aboutme.html">About Me</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -59,14 +73,16 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav class="col-md-3 col-lg-2 d-md-block sidebar collapse p-4">
-        <div class="position-sticky">
+      <nav class="col-md-3 col-lg-2 d-none d-md-block sidebar p-3 pt-4">
+        <div class="position-sticky text-center">
           <h5 class="fw-bold mb-3">About Me</h5>
-          <p class="small text-muted">Halo! Saya Alydap. Saya seorang pengembang yang fokus pada hasil karya yang bersih
-            dan fungsional.</p>
+          <img src="img/profile.jpg" alt="Alydap" class="profile-img mb-3">
+
+          <p class="small text-muted text-start">Assalamu'alaikum wr.wb! Saya Muhammad Ferdynan Ali Syahbana. Saya
+            seorang Fullstack Web developer Laravel & Ci4 yang telah berpengalaman lebih dari 3 tahun</p>
           <hr>
           <h5 class="fw-bold mb-3">Skills</h5>
-          <div class="d-flex flex-wrap gap-2">
+          <div class="d-flex flex-wrap gap-2 justify-content-center">
             <span class="badge bg-secondary">HTML</span>
             <span class="badge bg-secondary">CSS</span>
             <span class="badge bg-secondary">JS</span>
@@ -74,39 +90,55 @@
           </div>
           <hr>
           <h5 class="fw-bold mb-3">Links</h5>
-          <ul class="list-unstyled">
+          <ul class="list-unstyled text-start ps-2">
             <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-github"></i> GitHub</a></li>
             <li><a href="#" class="text-decoration-none text-dark"><i class="bi bi-linkedin"></i> LinkedIn</a></li>
           </ul>
         </div>
       </nav>
 
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-2">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center py-3 mb-3 border-bottom">
           <h1 class="h2" id="projects">My Projects</h1>
         </div>
 
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 pt-2">
 
           <div class="col">
-            <div class="card h-100 project-card shadow-sm">
-              <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 1">
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Nama Projek 1</h5>
-                <p class="card-text text-muted small">Deskripsi singkat tentang projek kamu yang hebat ini.</p>
-                <a href="https://alydap.github.io/nama-repo-projek1/" class="btn btn-outline-dark btn-sm">Lihat Demo</a>
+            <div class="card h-100 project-card shadow-sm p-3">
+              <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
+              <div class="card-body p-0 pt-3">
+                <h5 class="card-title fw-bold">Prebusa</h5>
+                <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
+                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
+                  Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
+                </a>
               </div>
             </div>
           </div>
 
           <div class="col">
-            <div class="card h-100 project-card shadow-sm">
-              <img src="https://via.placeholder.com/400x250" class="card-img-top" alt="Project 2">
-              <div class="card-body">
-                <h5 class="card-title fw-bold">Nama Projek 2</h5>
-                <p class="card-text text-muted small">Deskripsi singkat tentang projek kamu yang hebat ini.</p>
-                <a href="https://alydap.github.io/nama-repo-projek2/" class="btn btn-outline-dark btn-sm">Lihat Demo</a>
+            <div class="card h-100 project-card shadow-sm p-3">
+              <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
+              <div class="card-body p-0 pt-3">
+                <h5 class="card-title fw-bold">Prebusa</h5>
+                <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
+                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
+                  Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 project-card shadow-sm p-3">
+              <img src="img/prebusa.png" class="card-img-top" alt="Prebusa Project">
+              <div class="card-body p-0 pt-3">
+                <h5 class="card-title fw-bold">Prebusa</h5>
+                <p class="card-text text-muted small mb-2">Permen Buah Sayur</p>
+                <a href="https://prebusa.vercel.app/" target="_blank" class="stretched-link small">
+                  Lihat Demo Live <i class="bi bi-box-arrow-up-right"></i>
+                </a>
               </div>
             </div>
           </div>
